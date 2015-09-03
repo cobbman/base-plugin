@@ -73,10 +73,9 @@ require_once( $this_dir . 'inc/menu.php' );
 
 /**
  *
- * SCRIPTS:
+ * SCRIPTS: -- turn this on if you want to add custom js or css to the site, outside the theme files
  *
- * bigwilliam_debug()
- * bw_imagelink_setup()
+ * bw_added_scripts()
  *
  */
 // require_once( $this_dir . 'inc/scripts.php' );
