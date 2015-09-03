@@ -13,7 +13,7 @@
  * Plugin Name: Base Plugin
  * Plugin URI:  http://bigwilliam.com/
  * Description: A plugin with features for this website.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      BigWilliam
  * Author URI:  http://bigwilliam.com/
  * License:     MIT
@@ -27,11 +27,57 @@ if ( ! defined( 'WPINC' ) ) {
 
 $this_dir = plugin_dir_path( __FILE__ );
 
-/*
- = Load Global Functions. Turn these on and off as you need
- ----------------------------------------------------------*/
-require_once( $this_dir . 'inc/utilities.php' ); // debug functions
-require_once( $this_dir . 'inc/login.php' );     // custom login page
-require_once( $this_dir . 'inc/menu.php' );      // menu changes and custom links
-// require_once( $this_dir . 'inc/scripts.php' );   // custom scripts and styles. useful if you need to quickly add custom css or js to a site.
+if ( ! defined( 'BW_BASE_PLUGIN' ) ) {
+	define( 'BW_BASE_PLUGIN', $this_dir );
+}
+
+/*========================================================================*
+  Comment these out if you don't need them
+ *========================================================================*/
+
+
+/**
+ *
+ * UTILITIES:
+ *
+ * bigwilliam_debug()
+ * bw_default_media_links()
+ *
+ */
+require_once( $this_dir . 'inc/utilities.php' );
+
+
+
+/**
+ *
+ * LOGIN: -- requires custom config per site
+ *
+ * bw_login_logo()
+ * bw_login_logo_url() 
+ * bw_login_logo_url_title()
+ *
+ */
+require_once( $this_dir . 'inc/login.php' );
+
+/**
+ *
+ * MENU: -- requires custom config per site
+ *
+ * bw_remove_menu_items()
+ * bw_custom_menu_names()
+ * bw_change_admin_bar()
+ * bw_replace_footer_text() 
+ *
+ */
+require_once( $this_dir . 'inc/menu.php' );
+
+/**
+ *
+ * SCRIPTS:
+ *
+ * bigwilliam_debug()
+ * bw_imagelink_setup()
+ *
+ */
+// require_once( $this_dir . 'inc/scripts.php' );
 

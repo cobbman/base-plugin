@@ -2,7 +2,7 @@
 /**
  * Scripts
  *
- * Enqueue custom scripts. Keeps them outside the themes to avoid losing changes on theme upgrades
+ * Enqueue custom scripts and styles. Keeps them outside the themes to avoid losing changes on theme upgrades. Also good for quick changes. Especially if the theme styles are made in LESS or SCSS.
  *
  * @package   Base_Plugin
  * @author    Big William <hello@bigwilliam.com>
@@ -11,7 +11,8 @@
  * @copyright 2014 BigWilliam Development
  */
 
-function base_plugin_scripts() {
-  wp_enqueue_style('base_plugin_main',  plugins_url( ) . '/base-plugin/assets/css/custom.css', false, '1.0');
+function bw_added_scripts() {
+	wp_enqueue_script( 'bw-added-scripts', BW_BASE_PLUGIN . '/assets/js/custom.js', array(), '1.0', true );
+  wp_enqueue_style(  'bw-added-styles',  BW_BASE_PLUGIN . '/assets/css/custom.css', false, '1.0');
 }
-add_action('wp_enqueue_scripts', 'base_plugin_scripts', 100);
+add_action('wp_enqueue_scripts', 'bw_added_scripts', 100);
