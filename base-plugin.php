@@ -27,9 +27,6 @@ if ( ! defined( 'WPINC' ) ) {
 
 $this_dir = plugin_dir_path( __FILE__ );
 
-if ( ! defined( 'BW_BASE_PLUGIN' ) ) {
-	define( 'BW_BASE_PLUGIN', $this_dir );
-}
 
 /*========================================================================*
   Comment these out if you don't need them
