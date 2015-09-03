@@ -44,7 +44,6 @@ $this_dir = plugin_dir_path( __FILE__ );
 require_once( $this_dir . 'inc/utilities.php' );
 
 
-
 /**
  *
  * LOGIN: -- requires custom config per site
@@ -55,6 +54,7 @@ require_once( $this_dir . 'inc/utilities.php' );
  *
  */
 require_once( $this_dir . 'inc/login.php' );
+
 
 /**
  *
@@ -68,6 +68,7 @@ require_once( $this_dir . 'inc/login.php' );
  */
 require_once( $this_dir . 'inc/menu.php' );
 
+
 /**
  *
  * SCRIPTS: -- turn this on if you want to add custom js or css to the site, outside the theme files
@@ -75,5 +76,4 @@ require_once( $this_dir . 'inc/menu.php' );
  * bw_added_scripts()
  *
  */
-// require_once( $this_dir . 'inc/scripts.php' );
-
+require_once( $this_dir . 'inc/scripts.php' );
