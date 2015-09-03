@@ -33,5 +33,5 @@ $this_dir = plugin_dir_path( __FILE__ );
 require_once( $this_dir . 'inc/utilities.php' ); // debug functions
 require_once( $this_dir . 'inc/login.php' );     // custom login page
 require_once( $this_dir . 'inc/menu.php' );      // menu changes and custom links
-// require_once( $this_dir . 'inc/scripts.php' );   // custom scripts and styles
+// require_once( $this_dir . 'inc/scripts.php' );   // custom scripts and styles. useful if you need to quickly add custom css or js to a site.
 

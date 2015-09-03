@@ -38,12 +38,12 @@ if ( ! function_exists( 'bigwilliam_debug' ) ) {
  * @since  1.0.0
  * @return void
  */
-if ( ! function_exists( 'bw_imagelink_setup' ) ) {
-	function bw_imagelink_setup() {
+if ( ! function_exists( 'bw_default_media_links' ) ) {
+	function bw_default_media_links() {
 	  $image_set = get_option( 'image_default_link_type' );
 	  if ($image_set !== 'none') {
 	    update_option('image_default_link_type', 'none');
 	  }
 	}
 }
-add_action('admin_init', 'bw_imagelink_setup', 10);
+add_action('admin_init', 'bw_default_media_links', 10);

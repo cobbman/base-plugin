@@ -26,6 +26,7 @@
  * @return void
  */
 function bw_remove_menu_items() {
+
   // provide a list of usernames who can access special admin menu items
   $admins = array( 
     'admin'
@@ -45,14 +46,14 @@ add_action( 'admin_menu', 'bw_remove_menu_items', 999 );
 
 
 /**
- * Change "posts" to "blog"
+ * Modify names of admin menu items
  *
  * @since  1.0.0
  * @return void
  */
 function bw_custom_menu_names() {
   global $menu;
-  $menu[5][0] = 'Blog';
+  $menu[5][0] = 'Blog'; // change "posts" to "blog"
 }
 add_action( 'admin_menu', 'bw_custom_menu_names', 999 );
 
@@ -106,7 +107,7 @@ add_action( 'wp_before_admin_bar_render', 'bw_change_admin_bar' );
  * @since  1.0.0
  * @return void
  */
-function bw_replace_footer_text () {
+function bw_replace_footer_text() {
   printf( 
     '<span id="footer-thankyou">%s <a href="%s" target="_blank">%s</a>.</span>',
      __( 'Website proudly created by', 'roots' ), 
