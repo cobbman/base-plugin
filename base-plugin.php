@@ -62,6 +62,7 @@ require_once( $this_dir . 'inc/login.php' );
  *
  * bw_remove_menu_items()
  * bw_custom_menu_names()
+ * pages_above_posts()
  * bw_change_admin_bar()
  * bw_replace_footer_text() 
  *

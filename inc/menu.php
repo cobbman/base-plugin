@@ -59,6 +59,24 @@ add_action( 'admin_menu', 'bw_custom_menu_names', 999 );
 
 
 /**
+ * Modify names of admin menu items
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function pages_above_posts( $menu_order ) {
+  return array(
+    'index.php',
+    'edit.php?post_type=page',
+    'edit.php',
+    'upload.php',
+  );
+}
+add_filter( 'custom_menu_order', '__return_true' );
+add_filter( 'menu_order', 'pages_above_posts' );
+
+
+/**
  * Change Admin Bar
  *
  * Adds links to WP logo and more
