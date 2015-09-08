@@ -51,7 +51,6 @@ add_action('admin_init', 'bw_default_media_links', 10);
 
 /*
  * => FIX CHROME ADMIN MENU (KNOWN ISSUE)
- * 
  * ---------------------------------------------------------------------------*/
 add_action( 'admin_enqueue_scripts', 'chrome_fix' );
 function chrome_fix() {
