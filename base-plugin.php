@@ -39,6 +39,7 @@ $this_dir = plugin_dir_path( __FILE__ );
  *
  * bigwilliam_debug()
  * bw_default_media_links()
+ * chrome_fix()
  *
  */
 require_once( $this_dir . 'inc/utilities.php' );

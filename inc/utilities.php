@@ -47,3 +47,15 @@ if ( ! function_exists( 'bw_default_media_links' ) ) {
 	}
 }
 add_action('admin_init', 'bw_default_media_links', 10);
+
+
+/*
+ * => FIX CHROME ADMIN MENU (KNOWN ISSUE)
+ * 
+ * ---------------------------------------------------------------------------*/
+add_action( 'admin_enqueue_scripts', 'chrome_fix' );
+function chrome_fix() {
+  if ( strpos( $_SERVER[ 'HTTP_USER_AGENT' ], 'Chrome' ) !== false ) {
+    wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0) }' );
+  }
+}
