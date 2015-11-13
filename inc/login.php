@@ -16,30 +16,26 @@
  * => Add custom logo image, instead of WordPress Default
  * ---------------------------------------------------------------------------*/
 
-// for now, just edit it twice. Once here, and once down below.
-$logo_path = get_stylesheet_directory() . '/screenshot.png';
-
-// Only change login logo if one exists
-if ( file_exists( $logo_path ) ) :
-
   function bw_login_logo() { 
-  ?>
-    <style type="text/css">
-        body.login h1 a {
-          background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/screenshot.png');
-          background-size: 100%;
-          width: 100%;
-        }
-        .login form .input, 
-        .login input[type="text"] {
-          background: #fff;
-        }
-    </style>
-  <?php 
+
+    $logo_path = get_stylesheet_directory() . '/screenshot.png';
+
+    if ( file_exists( $logo_path ) ) : ?>
+      <style type="text/css">
+          body.login h1 a {
+            background-image: url('<?php echo $logo_path ?>');
+            background-size: 100%;
+            width: 100%;
+          }
+          .login form .input, 
+          .login input[type="text"] {
+            background: #fff;
+          }
+      </style>
+    <?php endif;
   } 
   add_action( 'login_enqueue_scripts', 'bw_login_logo' );
 
-endif;
 
 
 /*
